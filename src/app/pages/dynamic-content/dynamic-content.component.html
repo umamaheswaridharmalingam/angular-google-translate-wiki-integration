@@ -1,0 +1,23 @@
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+<form class="example-form" [formGroup]="searchForm" autocomplete="off" (ngSubmit)="onSubmit()">
+  <mat-form-field class="example-full-width" appearance="fill" [style.width.px]="400">
+    <mat-label>Search Wikipedia</mat-label>
+    <input name="topicKeyword" id="txtTopicKeyword" formControlName="topicKeyword" matInput
+      placeholder="Enter a Topic/Keyword" required />
+    <button type="submit" matSuffix mat-icon-button aria-label="Search" color="primary" [disabled]="isLoading">
+      <mat-icon matSuffix>search</mat-icon>
+    </button>
+    <button *ngIf="isValueExsist" matSuffix mat-icon-button aria-label="Clear" (click)="clearForm()" tabindex="-1">
+      <mat-icon>close</mat-icon>
+    </button>
+    <!-- <mat-spinner matSuffix *ngIf="!isLoading"></mat-spinner> -->
+  </mat-form-field>
+</form>
+<div [innerHTML]="wikiContent | sanitizedHtml" *ngIf="!isLoading"></div>
+<div class="alert alert-warning" *ngIf="displayCommonError"> Sorry, Your search Topic/Keyword <b>{{ searchKeyword }}</b>
+  did not match any documents in Wikipedia <ul>
+    <li>Make sure all words are spelled correctly.</li>
+    <li>Try different keywords.</li>
+    <li>Try more general keywords.</li>
+  </ul>
+</div>

@@ -1,0 +1,17 @@
+<div class="wrapper" [ngClass]="{ 'zondimo-dark-theme': darkTheme }">
+  <app-header
+    [title]="title"
+    (onToggleSidenav)="toggleSidenav()"
+    (onToggleTheme)="toggleTheme()"
+  ></app-header>
+
+  <mat-sidenav-container class="main-app">
+    <mat-sidenav #sidenav [mode]="navMode" class="sidenav" opened="true">
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-container>
+</div>

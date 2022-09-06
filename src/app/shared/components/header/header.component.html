@@ -1,0 +1,39 @@
+<mat-toolbar class="header-bar">
+  <button class="toggleSidenav" (click)="toggleSidenav()">
+    <mat-icon color="primary">menu</mat-icon>
+  </button>
+  <a class="main-logo" [routerLink]="'/'"
+    ><mat-icon
+      aria-hidden="false"
+      color="primary"
+      aria-label="Example home icon"
+      fontIcon="g_translate"
+    ></mat-icon
+    ><span class="app-title notranslate"> {{ title }}</span></a
+  >
+  <div #btnGoogleTrans id="google_translate_element"></div>
+  <!-- <button
+    mat-icon-button
+    color="warn"
+    aria-label="Reset Language"
+    (click)="reset()"
+  >
+    <span>Reset to Default</span><mat-icon>close</mat-icon>
+  </button> -->
+  <button mat-raised-button class="notranslate btnreset" (click)="reset()">
+    <mat-icon>refresh</mat-icon> Reset
+  </button>
+  <span class="spacer"></span>
+  <mat-slide-toggle
+    class="toggleTheme"
+    (change)="toggleTheme()"
+  ></mat-slide-toggle>
+  <!-- <button class="create-playlist" *ngIf="user.authenticated" mat-button color="primary" (click)="createPlaylist()"><mat-icon class="primary">playlist_add</mat-icon> Add playlist</button>
+  <button mat-button color="primary" *ngIf="!user.authenticated" [routerLink]="'./user/login'">
+    <mat-icon class="action_icon">person</mat-icon>Login
+  </button> -->
+  <!-- <a *ngIf="user.authenticated" class="user_image">
+    <img [src]="user.user_image" [alt]="user.username" />
+  </a> -->
+  <!-- <button class="action-button" (click)="logout()" *ngIf="user.authenticated"><mat-icon class="action_icon" color="accent">exit_to_app</mat-icon></button> -->
+</mat-toolbar>
