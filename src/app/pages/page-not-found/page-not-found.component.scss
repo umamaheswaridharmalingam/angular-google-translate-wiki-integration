@@ -1,0 +1,71 @@
+$moon: #ffffff;
+$moon-light: #f8faff;
+$moon-hover: #f5f6f9;
+$moon-silver: #edeff5;
+#notfound {
+	position: relative;
+	height: 500px;
+	text-align: center;
+
+	.notfound {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		padding: 50px;
+		// background: $moon-light;
+		border-radius: 4px;
+		box-shadow: 0 15px 15px -15px rgba(0, 168, 235, 0.33);
+		border: solid 1px $moon-silver;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+
+		h2 {
+			font-family: "Cabin", sans-serif;
+			font-size: 20px;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: #000;
+			margin-top: 0px;
+			margin-bottom: 25px;
+		}
+	}
+
+	.notfound-404 {
+		position: relative;
+		height: 160px;
+
+		h1 {
+			font-family: "Montserrat", sans-serif;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 100px;
+			font-weight: 900;
+			margin: 0px;
+			color: #262626;
+			text-transform: uppercase;
+			letter-spacing: -10px;
+			margin-left: -20px;
+			> span {
+				text-shadow: -8px 0px 0px #fff;
+			}
+		}
+	}
+
+	.page-error {
+		i {
+			font-size: 50px;
+		}
+		h3 {
+			font-family: "Montserrat", sans-serif;
+			font-weight: 400;
+		}
+		p-button {
+			margin-top: 20px;
+		}
+	}
+}

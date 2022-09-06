@@ -32,6 +32,7 @@ import { CommonModule } from '@angular/common';
 import { StaticContentComponent } from './pages/static-content/static-content.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     SidebarComponent,
     DynamicContentComponent,
     SanitizedHtmlPipe,
-    StaticContentComponent
+    StaticContentComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
